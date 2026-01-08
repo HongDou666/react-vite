@@ -1,0 +1,7 @@
+@import url('./variable.scss'); // 存放项目统一规范的变量
+@import url('./reset.scss'); // 重置浏览器默认样式
+@import url('./font.scss'); // 引入字体文件
+@import url('./custom.scss'); // 自定义的 css 样式
+@import url('./theme/css-theme.scss'); // 基于 css 主题样式 (暗色 亮色)
+@import url('./antd-design.scss'); // 修改 antd-design-vue 样式
+@import url('./media.scss'); // 使用scss简化做媒体查询

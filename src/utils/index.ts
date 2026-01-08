@@ -1,0 +1,6 @@
+export * from './colord'
+export { startMove, stopMove } from './page-scroll'
+export { useAuthorization } from './authorization'
+export { encryptionData, decryptionData } from './encrypt'
+export { regularPassword } from './validate'
+export { formatDateToChinese } from './day'

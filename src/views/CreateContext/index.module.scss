@@ -1,0 +1,35 @@
+.createContext {
+  .parent {
+    width: 500px;
+    padding: 8px;
+    color: #fff;
+    background-color: orange;
+
+    /* 1. 样式穿透 */
+    // :global(.child) {
+    //   width: 100%;
+    //   background-color: skyblue;
+    //   padding: 8px;
+    //   :global(.grand) {
+    //     width: 100%;
+    //     background-color: gray;
+    //     padding: 8px;
+    //   }
+    // }
+
+    /* 2. 样式穿透 */
+    :global {
+      .child {
+        width: 100%;
+        padding: 20px;
+        background-color: rgb(99 141 255);
+
+        .grand {
+          width: 100%;
+          padding: 8px;
+          background-color: rgb(255 147 97);
+        }
+      }
+    }
+  }
+}

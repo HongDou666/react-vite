@@ -1,0 +1,33 @@
+.message {
+  position: fixed;
+  left: 50%;
+  width: auto;
+  height: 40px;
+  padding: 9px 12px;
+  color: rgb(0 0 0 / 87.8%);
+  background-color: #fff;
+  border-radius: 5px;
+  transform: translateX(-50%);
+  box-shadow: 0 6px 16px 0 rgb(0 0 0 / 8%), 0 3px 6px -4px rgb(0 0 0 / 12%), 0 9px 28px 8px rgb(0 0 0 / 5%);
+  transition: all 0.4s ease-in-out;
+  animation: msg-animation 0.4s;
+
+  :global {
+    .anticon {
+      margin-right: 10px;
+    }
+  }
+}
+
+/* 动画 */
+@keyframes msg-animation {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}

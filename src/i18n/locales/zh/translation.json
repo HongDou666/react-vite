@@ -1,0 +1,14 @@
+{
+  "verse1": "绝壁悬崖相对面，刀切斧劈万年渊",
+  "verse2": "地崩山裂神之力，过隘侧身一线天",
+  "simpleText": "这是一篇简单的文章",
+  "author": "作者：<0>想吃蛋糕</0><1>年夜饭</1>",
+  "currentTime": "当前时间是 {{city}}: {{time, YYYY-MM-DD}}",
+  "home": {
+    "title": "首页"
+  },
+  "about": {
+    "title": "关于我们"
+  },
+  "runningman": "奔跑吧 兄弟"
+}

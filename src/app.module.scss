@@ -1,0 +1,23 @@
+.root-app {
+  padding: 1rem;
+
+  ul {
+    li {
+      padding: 0 0 0 20px;
+      margin: 6px auto;
+      line-height: 38px;
+      text-align: left;
+      cursor: pointer;
+      background-color: #6c73ff;
+      border-radius: 10px;
+
+      .nav-item {
+        color: #fff;
+
+        &.nav-active {
+          color: rgb(255 158 94);
+        }
+      }
+    }
+  }
+}

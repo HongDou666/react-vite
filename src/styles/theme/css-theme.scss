@@ -1,0 +1,43 @@
+/*
+  主题切换: 基于Css变量做法
+  抖音链接: https://www.douyin.com/user/self?from_tab_name=main&modal_id=7411452894236380431&showTab=record
+*/
+
+/* :root {}  ===  html {} */
+
+/* 1. light主题（默认亮色主题） */
+:root,
+html[data-theme='light']:root {
+  /* 背景主色调 */
+  --theme-bg-color: #d2e0fa;
+
+  /* 适配亮色主题的字体色 */
+  --theme-font-color: #000000e0;
+  --theme-border-color: #85a5ff;
+
+  /* 亮色主题下的色系 */
+  --root-bg-color: #fff;
+  --root-color: #000;
+
+  --app-bg-color: #ffffff;
+  --app-color: #1f1f1f;
+  --app-bg-content-color: #f7fafc;
+}
+
+/* 2. 黑色主题 */
+html[data-theme='dark']:root {
+  /* 背景主色调 */
+  --theme-bg-color: #203175;
+
+  /* 适配黑色主题的字体色 */
+  --theme-font-color: #fff;
+  --theme-border-color: #b37feb;
+
+  /* 黑色主题下的色系 */
+  --root-bg-color: #141414;
+  --root-color: #fff;
+
+  --app-bg-color: #1c1c1c;
+  --app-color: #ffffff;
+  --app-bg-content-color: #121212;
+}

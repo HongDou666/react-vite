@@ -1,0 +1,14 @@
+.antTheme {
+  min-height: 400px;
+
+  /* 
+    stylelint检查报错：Unexpected missing generic font family font-family-no-missing-generic-family-keyword
+    参考文献: https://blog.csdn.net/a1056244734/article/details/125783641
+  */
+  font-family: ZQC-zk, sans-serif; // 站酷文艺体.otf
+
+  .iconfont {
+    font-weight: 900;
+    text-decoration: underline;
+  }
+}

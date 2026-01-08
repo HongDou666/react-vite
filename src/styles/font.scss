@@ -1,0 +1,83 @@
+@font-face {
+  font-family: ZQC-zk; // 站酷文艺体.otf
+  font-style: normal;
+  font-weight: normal;
+  src: url('../assets/font/zk.otf');
+}
+
+@font-face {
+  font-family: ZQC-pm; // 庞门正道标题体.ttf
+  font-style: normal;
+  font-weight: normal;
+  src: url('../assets/font/pm.ttf');
+}
+
+@font-face {
+  font-family: ZQC-zjmc; // 装甲明朝体.ttf
+  font-style: normal;
+  font-weight: normal;
+  src: url('../assets/font/zjmc.ttf');
+}
+
+@font-face {
+  font-family: ZQC-yrdz; // 杨任东竹石体.ttf
+  font-style: normal;
+  font-weight: normal;
+  src: url('../assets/font/yrdz.ttf');
+}
+
+@font-face {
+  font-family: ZQC-magic; // 麦克笔手绘.ttf
+  font-style: normal;
+  font-weight: normal;
+  src: url('../assets/font/magic.ttf');
+}
+
+/* 引入 iconfont 阿里巴巴字体图标 */
+
+@font-face {
+  font-family: iconfont; /* Project id 3881714 */
+  src: url('~@/assets/font/icon-font/iconfont.woff2?t=1734936165241') format('woff2'),
+    url('~@/assets/font/icon-font/iconfont.woff?t=1734936165241') format('woff'),
+    url('~@/assets/font/icon-font/iconfont.ttf?t=1734936165241') format('truetype');
+}
+
+.iconfont {
+  font-family: iconfont !important;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+}
+
+.icon-gengduo::before {
+  content: '\e65b';
+}
+
+.icon-shouye::before {
+  content: '\e65c';
+}
+
+.icon-tongzhi::before {
+  content: '\e65d';
+}
+
+.icon-zhushujuguanli::before {
+  content: '\e65e';
+}
+
+.icon-xitongshezhi::after {
+  content: '\e65f';
+}
+
+.icon-yuyan::after {
+  content: '\e660';
+}
+
+.icon-zixitongguanli::after {
+  content: '\e661';
+}
+
+.icon-gerenxinxi::after {
+  content: '\e662';
+}

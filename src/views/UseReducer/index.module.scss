@@ -1,0 +1,12 @@
+.useReducer {
+  padding: 10px;
+  border: 5px solid #638dff;
+
+  :global {
+    .use-reducer-child1 {
+      width: 100%;
+      padding: 10px;
+      border: 5px solid #638dff;
+    }
+  }
+}

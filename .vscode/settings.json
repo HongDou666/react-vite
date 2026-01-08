@@ -1,0 +1,84 @@
+{
+  /*
+    vscode来支持保存后触发格式化 先配置了忽略哪些文件不进行格式化，又添加了保存代码后触发格式化代码配置，以及各类型文件格式化使用的格式。
+  */
+  "search.exclude": {
+    "/node_modules": true,
+    "dist": true,
+    "pnpm-lock.sh": true
+  },
+  "editor.formatOnSave": true,
+  /* 开启stylelint自动修复 */
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.fixAll.stylelint": "explicit"
+  },
+  /* 关闭编辑器内置样式检查（避免与stylelint冲突）*/
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  /* 配置stylelint检查的文件类型范围 */
+  "stylelint.validate": ["css", "less", "postcss", "scss", "sass", "vue"],
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "liveServer.settings.port": 5502,
+
+  /* unocss 配置根路径 */
+  "unocss.root": ["./"],
+  /* 关闭vscode自带的格式化插件 */
+  // "prettier.enable": false,
+  /* 指定vscode的ts编译器版本 */
+  "typescript.tsdk": "node_modules/typescript/lib",
+  /* 在编辑器中显示括号对的引导线 */
+  "editor.guides.bracketPairs": "active",
+
+  /* 设置默认语言 */
+  "i18n-ally.sourceLanguage": "zh",
+  /* 设置当前显示的主体语言 属性的值取的是你翻译文件或者文件夹的名称 */
+  "i18n-ally.displayLanguage": "zh",
+  /* 启用翻译引擎 */
+  "i18n-ally.enabledParsers": ["ts", "json"],
+  /* 启用i18n-ally框架的支持 */
+  "i18n-ally.enabledFrameworks": ["react-i18next"],
+  /* 是否使用编辑器内置翻译功能 */
+  "i18n-ally.editor.preferEditor": true,
+  /* deepl 谷歌翻译 */
+  "i18n-ally.translate.engines": ["deepl", "google"],
+  /*
+    语言文件内部的数据结构
+    flat({"a.b.c": "..."}) or nested({"a": {"b": {"c": "..."}}}
+  */
+  "i18n-ally.keystyle": "nested",
+  /* 翻译时选择目标文件 */
+  "i18n-ally.extract.targetPickingStrategy": "most-similar",
+  /* 翻译文件路径 */
+  "i18n-ally.localesPaths": ["src/i18n/locales"]
+}

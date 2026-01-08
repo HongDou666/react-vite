@@ -1,0 +1,50 @@
+.reactQuillEdit {
+  :global {
+    .react-quill-edit {
+      .ql-editor {
+        min-height: 300px;
+      }
+
+      .ql-snow .ql-picker.ql-font .ql-picker-label[data-value='ZQC-zk']::before,
+      .ql-snow .ql-picker.ql-font .ql-picker-item[data-value='ZQC-zk']::before {
+        font-family: ZQC-zk;
+        content: '站酷文艺体';
+      }
+
+      .ql-snow .ql-picker.ql-font .ql-picker-label[data-value='ZQC-pm']::before,
+      .ql-snow .ql-picker.ql-font .ql-picker-item[data-value='ZQC-pm']::before {
+        font-family: ZQC-pm;
+        content: '庞门正道标题体';
+      }
+
+      .ql-snow .ql-picker.ql-font .ql-picker-label[data-value='ZQC-zjmc']::before,
+      .ql-snow .ql-picker.ql-font .ql-picker-item[data-value='ZQC-zjmc']::before {
+        font-family: ZQC-zjmc;
+        content: '装甲明朝体';
+      }
+
+      .ql-snow .ql-picker.ql-font .ql-picker-label[data-value='ZQC-yrdz']::before,
+      .ql-snow .ql-picker.ql-font .ql-picker-item[data-value='ZQC-yrdz']::before {
+        font-family: ZQC-yrdz;
+        content: '杨任东竹石体';
+      }
+
+      /* 设置每个字体的css字体样式 */
+      .ql-font-ZQC-zk {
+        font-family: ZQC-zk;
+      }
+
+      .ql-font-ZQC-pm {
+        font-family: ZQC-pm;
+      }
+
+      .ql-font-ZQC-zjmc {
+        font-family: ZQC-zjmc;
+      }
+
+      .ql-font-ZQC-yrdz {
+        font-family: ZQC-yrdz;
+      }
+    }
+  }
+}

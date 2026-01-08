@@ -1,0 +1,9 @@
+# 不需要格式化的文件
+/dist/*
+/public/*
+/node_modules/**
+.local
+.output.js
+**/*.svg
+**/*.sh
+index.html

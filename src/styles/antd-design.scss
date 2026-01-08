@@ -1,0 +1,15 @@
+.ant-table-wrapper.custom-theme {
+  .ant-table {
+    .ant-table-container {
+      .ant-table-thead {
+        tr {
+          th {
+            color: $table-thead-color; // 全局变量
+            background-color: var(--color-custom9);
+            border: 3px solid $auto-color-custom4; // 全局变量
+          }
+        }
+      }
+    }
+  }
+}

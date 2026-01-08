@@ -1,0 +1,117 @@
+/*
+  注意: global-import-variable 模块文件里面包含一些公共的变量或者混合 作为scss模块来使用 就不能使用运行时态的写法了 @import url('xxx'); 需要用编译时态的写法
+    编译时态写法1: @import 'xxx'; 存在问题 (混淆 变量污染 私有)
+    编译时态写法2: @use 'xxx' 推荐写法
+
+  抖音链接: https://www.douyin.com/user/self?from_tab_name=main&modal_id=7414707759872003365&showTab=record
+  抖音链接: https://www.douyin.com/user/self?from_tab_name=main&modal_id=7405855001479744820&showSubTab=video&showTab=record
+*/
+
+// @import '~@/styles/scss/global-import-variable';
+@use '~@/styles/scss/global-import-variable' as imp; // 编译时态写法定义别名
+
+/* 导入内置函数语法 */
+@use 'sass:math';
+
+$r: 120px; // 半径
+$n: 8; // icon 数量
+$step: 360deg / $n; // 旋转角度
+
+.scss {
+  .annular {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    .inner {
+      inset: 0;
+      border-radius: 50%;
+    }
+
+    .outer {
+      inset: 60px;
+      border-radius: 50%;
+    }
+
+    .icon {
+      span {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        inset: 0;
+      }
+
+      /*
+        scss 数学函数 环形菜单
+        抖音链接: https://www.douyin.com/user/self?from_tab_name=main&modal_id=7403635798022622518&showTab=record
+      */
+      @for $i from 1 through $n {
+        span:nth-child(#{$i}) {
+          $deg: $step * ($i - 1);
+          $x: $r * math.sin($deg);
+          $y: $r * math.cos($deg) * -1;
+
+          transform: translate($x, $y);
+        }
+      }
+
+      /*
+        span:nth-child(1) {
+          $deg: 0deg;
+          $x: $r * math.sin($deg);
+          $y: $r * math.cos($deg) * -1;
+          transform: translate($x, $y);
+        }
+        span:nth-child(2) {
+          $deg: 45deg;
+          $x: 120px * math.sin($deg);
+          $y: 120px * math.cos($deg) * -1;
+          transform: translate($x, $y);
+        }
+      */
+    }
+
+    :global {
+      .anticon {
+        position: absolute;
+        display: flex;
+        font-size: 40px;
+        color: $auto-color-custom1;
+        justify-content: center;
+        inset: 0;
+      }
+    }
+  }
+
+  .ant-icon {
+    display: flex;
+    margin: 20px;
+    font-size: 40px;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  :global {
+    .ant-btn {
+      font-size: imp.$imp-size;
+      font-weight: imp.$imp-weight;
+      color: imp.$imp-color;
+    }
+
+    .ant-table {
+      .ant-table-container {
+        .ant-table-tbody {
+          tr {
+            td {
+              background-color: imp.$imp-bgColor;
+              border: 1px solid imp.$imp-borderColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}

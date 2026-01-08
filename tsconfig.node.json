@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    /* 注意: Cannot find module 'rollup/parseAst' */
+    "skipLibCheck": true,
+
+    "composite": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true
+  },
+  /* 因为在 ./build/** 中使用了Ts类型; 需要指定对应Ts类型的编译文件 */
+  "include": ["./src/types/env.d.ts", "./build/**/*.ts", "vite.config.ts"]
+}

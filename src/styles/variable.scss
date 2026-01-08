@@ -1,0 +1,17 @@
+/* 以下 Css 变量 加在了root身上 相当于所有子元素都可以使用 (可以继承)
+    color: var(--color-custom1);
+    color: var(--color-custom2);
+*/
+
+:root {
+  --color-custom1: #f28d35; /* 明亮的橙色 */
+  --color-custom2: #ff6f61; /* 珊瑚色 */
+  --color-custom3: #6a5acd; /* 中等紫色 */
+  --color-custom4: #00bcd4; /* 青色 */
+  --color-custom5: #7b68ee; /* 藕荷色 */
+  --color-custom6: #ff1493; /* 深粉色 */
+  --color-custom7: #3cb371; /* 中等海洋绿色 */
+  --color-custom8: #ffd700; /* 金色 */
+  --color-custom9: #ff6347; /* 番茄色 */
+  --color-custom10: #e6e6fa; /* 薰衣草色 */
+}

@@ -1,0 +1,15 @@
+# 不需要做eslint校验的文件
+node_modules
+*.md
+*.sh
+*.woff
+*.ttf
+.vscode
+.idea
+.husky
+.local
+dist
+/public
+/docs
+/bin
+index.html

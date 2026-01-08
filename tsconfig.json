@@ -1,0 +1,74 @@
+{
+  "compilerOptions": {
+    // 编译出JS的目标ES版本
+    "target": "ESNext",
+    // 使用的ES版本
+    "module": "ESNext",
+    // 将 class 声明中的字段语义从 [[Set]] 变更到 [[Define]]
+    "useDefineForClassFields": true,
+    // ts中可以使用的库 这里配置为 dom 与 es模块
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    // types用来指定需要包含的模块
+    "types": ["vite/client", "node", "vite-plugin-svg-icons/client", "vite-plugin-svgr/client"],
+    // 不允许编译器编译JS，JSX文件
+    "allowJs": false,
+    // 启用阻止对下载库的类型检查
+    "skipLibCheck": true,
+    // 通过为导入内容创建命名空间，实现CommonJS和ES模块之间的互操作性
+    "esModuleInterop": true,
+    // 允许使用 xxx 代替 * as xxx 导入
+    "allowSyntheticDefaultImports": true,
+    // 开启严格模式
+    "strict": true,
+    // 强制代码中使用的模块文件名必须和文件系统中的文件名保持大小写一致
+    "forceConsistentCasingInFileNames": false,
+    // 用于选择模块解析策略，有'node'和'classic'两种类型
+    "moduleResolution": "node",
+    // 是否可以导入 json module
+    "resolveJsonModule": true,
+    // 如果某个 ts 文件中没有一个import or export 时， ts 则认为这个模块不是一个 ES Module 模块，它被认为是一个全局的脚本，
+    "isolatedModules": true,
+    // 是否启用实验性的装饰器特性-prettier对于装饰器语法的警告
+    "experimentalDecorators": true,
+    // 不输出文件,即编译后不会生成任何js文件,默认：false
+    "noEmit": true,
+    // 指定 jsx 代码的生成: 'preserve', 'react-native', or 'react'
+    "jsx": "react-jsx",
+    // 是否检测定义了但是没使用的变量, 对于未使用的变量不进行爆红处理
+    "noUnusedLocals": false,
+    // 是否检查是否有在函数体中没有使用的参数, 对于函数中未使用的参数不进行爆红处理
+    "noUnusedParameters": false,
+    // 检查switch中是否含有case没有使用break跳出，默认：false (即如果没有break语句后面不会执行)
+    "noFallthroughCasesInSwitch": true,
+    // 允许变量或函数参数具有隐式any类型
+    "noImplicitAny": false,
+    // 编译的时候删除注释
+    "removeComments": true,
+    // 允许导入扩展名为.tsx的文件
+    "allowImportingTsExtensions": true,
+    // 允许React模块被解析为UMD全局模块而不是模块
+    "allowUmdGlobalAccess": true,
+    // 使用绝对路径时使用baseUrl去解析导入路径
+    "baseUrl": ".",
+    // 为导入路径配置别名 (VsCode 会有路径智能提示)
+    "paths": {
+      "@/*": ["src/*"],
+      "~@/*": ["src/*"],
+      "~/*": ["src/*"]
+    }
+  },
+  // 指定需要编译文件
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "./uno-preset/**.ts",
+    "./uno.config.ts"
+  ],
+  // 指定不需要编译的文件
+  "exclude": ["node_modules", "dist"],
+  // references 属性作用是指定工程引用依赖，即 tsconfig.node.json
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

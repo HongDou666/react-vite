@@ -1,0 +1,23 @@
+/*
+  这里css文件为什么可以实现嵌套语法呢
+  原因: 高版本的浏览器支持了css的嵌套语法 但是低版本的浏览器不支持 所以需要使用预处理器 比如: sass,less等来编译成普通的css文件
+ */
+.custom_css {
+  padding: 15px;
+  background: #f28d35;
+
+  .container_css {
+    padding: 15px;
+    background: #7b68ee;
+
+    .main-css {
+      padding: 15px;
+      background: #00bcd4;
+
+      .sectionCss {
+        padding: 15px;
+        background: #a7ff9d;
+      }
+    }
+  }
+}

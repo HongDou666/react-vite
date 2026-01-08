@@ -1,0 +1,64 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "people": [
+    {
+      "id": "1",
+      "name": "Emery Berger",
+      "phone": "(675) 553-1150",
+      "email": "metus.eu.erat@yahoo.net"
+    },
+    {
+      "id": "2",
+      "name": "Ryder Meyers",
+      "phone": "(488) 674-1375",
+      "email": "odio@icloud.edu"
+    },
+    {
+      "id": "3",
+      "name": "Declan Wagner",
+      "phone": "(463) 581-4518",
+      "email": "aenean@protonmail.couk"
+    },
+    {
+      "id": "4",
+      "name": "Armando Cohen",
+      "phone": "(416) 354-1386",
+      "email": "dapibus@hotmail.com"
+    },
+    {
+      "id": "5",
+      "name": "Brenden Ward",
+      "phone": "999888",
+      "email": "non.luctus@outlook.org"
+    },
+    {
+      "id": "8",
+      "name": "Mike",
+      "email": "m@x.com",
+      "phone": "888888"
+    }
+  ]
+}

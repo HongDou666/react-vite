@@ -1,0 +1,41 @@
+/* scss-theme.scss 文件已经改为全局自动引入了 无需再手动引入 */
+// @import '~@/styles/theme/scss-theme.scss';
+
+/*
+  注意：此时当前文件命名规则必须为 xxx.module.scss，否则在js获取时是一串字符
+  参考文献: https://blog.csdn.net/m0_38085253/article/details/126967511
+*/
+$namespace: Scss 主题模式;
+
+.scssTheme {
+  padding: 10px;
+  font-size: $auto-size;
+  font-weight: $auto-weight;
+  background-color: $auto-color;
+
+  .wrap {
+    height: 240px;
+    margin-top: 10px;
+    border-width: 10px;
+    border-style: solid;
+    @include theme {
+      background-color: getvar('bgColor');
+    }
+  }
+
+  .custom {
+    &__level-100 {
+      font-size: 46px;
+      font-weight: 900;
+
+      @include theme {
+        color: getvar('textColor');
+        border-color: getvar('borderColor');
+      }
+    }
+  }
+}
+
+:export {
+  namespace: $namespace;
+}

@@ -1,0 +1,18 @@
+# 由于每个人的vsocde编辑器默认配置可能不一样，比如有的默认缩进是4个空格，有的是2个空格，如果自己编辑器和项目代码缩进不一样，会给开发和项目代码规范带来一定影响，所以需要在项目中为编辑器配置下格式。
+
+# 打开vsocde插件商店，搜索EditorConfig for VS Code，然后进行安装。
+
+root = true # 控制配置文件 .editorconfig 是否生效的字段
+
+[**] # 匹配全部文件
+indent_style = space # 缩进风格，可选space｜tab
+indent_size = 2 # 缩进的空格数
+charset = utf-8 # 设置字符集
+trim_trailing_whitespace = true # 删除一行中的前后空格
+insert_final_newline = true # 设为true表示使文件以一个空白行结尾
+end_of_line = lf
+
+[**.md] # 匹配md文件
+trim_trailing_whitespace = false
+
+# 上面的配置可以规范本项目中文件的缩进风格，和缩进空格数等，会覆盖vscode的配置，来达到不同编辑器中代码默认行为一致的作用。

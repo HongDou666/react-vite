@@ -1,0 +1,51 @@
+.login-wrap {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  background: #f0f2f5;
+  justify-content: center;
+  align-items: center;
+
+  :global {
+    .login-container {
+      position: relative;
+      width: 430px;
+      padding: 30px;
+      color: #f5f5f5;
+      background-color: #05012cca;
+      border: 2px solid #222574;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+
+      .canvas-canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        width: 100vw;
+        height: 100vw;
+        pointer-events: none;
+      }
+
+      h1 {
+        font-family: ZQC-yrdz;
+        font-size: 24px;
+      }
+
+      .ant-form-item .ant-form-item-label > label {
+        color: #f5f5f5;
+      }
+
+      .ant-checkbox + span {
+        color: #f5f5f5;
+      }
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      gap: 20px;
+    }
+  }
+}

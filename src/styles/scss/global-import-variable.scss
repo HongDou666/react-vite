@@ -1,0 +1,9 @@
+$imp-size: 14px;
+$imp-weight: 400;
+$imp-color: #3693c1;
+
+$imp-bgColor: var(--color-custom2);
+$imp-borderColor: var(--color-custom8, #00c3ff);
+
+/* 私有变量 外部访问不到 只能当前文件使用 */
+$_imp-privately: var(--color-custom3, #ff6430);

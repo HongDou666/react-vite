@@ -1,0 +1,14 @@
+{
+  "verse1": "Cliff opposite face, knife cut axe thousands of years yuan",
+  "verse2": "Earth collapse mountain split God's force, pass the pass side one line day",
+  "simpleText": "This is a simple text.",
+  "author": "author：<0>Want to eat cake</0><1>New Year's Eve dinner</1>",
+  "currentTime": "Current time is {{city}}: {{time, YYYY-MM-DD}}",
+  "home": {
+    "title": "Home Page"
+  },
+  "about": {
+    "title": "About Us"
+  },
+  "runningman": "Running Man"
+}

@@ -1,0 +1,101 @@
+@use './mixin/index.scss' as mixin;
+
+/* 自定义初始化进度条颜色 */
+#nprogress .bar {
+  // background: #f60 !important;
+  background: $auto-color-custom2 !important;
+}
+
+/* 弹性盒子 */
+.flex-center {
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+
+  @include mixin.flex(center) {
+    color: #232323;
+  }
+
+  border-color: var(--theme-border-color);
+}
+
+/* Alert 提示 */
+
+/*
+  scss 样式继承
+  参考文献: https://www.douyin.com/user/self?from_tab_name=main&modal_id=7405855263137238272&showTab=record
+*/
+
+/* %alert {...} 不会生成最终的编译结果里面去的 只是方便去样式继承 */
+%alert {
+  height: 40px;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  @include mixin.flex(center) {
+    justify-content: start;
+  }
+}
+
+.alert-success {
+  background-color: #f0f9eb;
+  border: 1px solid #4cd137;
+  // @extend .alert;
+  @extend %alert;
+}
+
+.alert-info {
+  background-color: #ebf4f9;
+  border: 1px solid #409eff;
+  // @extend .alert;
+  @extend %alert;
+}
+
+.alert-warning {
+  background-color: #fdf6ec;
+  border: 1px solid #e1a12c;
+  // @extend .alert;
+  @extend %alert;
+}
+
+.alert-error {
+  background-color: #fef0f0;
+  border: 1px solid #ff5252;
+  // @extend .alert;
+  @extend %alert;
+}
+
+/* 绝对定位 撑满父容器 */
+.pos-inset {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  border: 1px solid #cbcbcb;
+}
+
+/* 此样式用于业务模块 */
+.wrap-table {
+  color: #000;
+  background-color: var(--root-bg-color);
+  border-radius: 5px;
+
+  .header {
+    display: flex;
+    padding: 15px;
+    color: var(--root-color);
+    border-radius: 5px 5px 0 0;
+    justify-content: space-between;
+    align-items: center;
+
+    .action button {
+      margin-left: 15px;
+    }
+  }
+}
+
+.search-form {
+  padding: 20px;
+  color: #000;
+  background-color: var(--root-bg-color);
+  border-radius: 5px;
+}

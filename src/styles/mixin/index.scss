@@ -1,0 +1,49 @@
+/* 定义mixin 封装 弹性盒子 样式 */
+@mixin flex($layout) {
+  display: flex;
+  justify-content: $layout;
+  align-items: $layout;
+
+  /* 类似插槽 */
+  @content;
+}
+
+/*
+  定义mixin 封装 媒体查询
+  抖音链接: https://www.douyin.com/user/self?from_tab_name=main&modal_id=7412217189828250931&showTab=record
+*/
+
+/* 定义一个设备映射 */
+$breakpoints: (
+  phone: (
+    320px,
+    480px
+  ),
+  pad: (
+    481px,
+    768px
+  ),
+  notebook: (
+    769px,
+    1024px
+  ),
+  desktop: (
+    1025px,
+    1200px
+  ),
+  tv: 1201px
+);
+@mixin reponseTo($dname) {
+  $bp: map-get($breakpoints, $dname);
+  @if type-of($bp) == 'list' {
+    @media (min-width: nth($bp,1)) and (max-width: nth($bp,2)) {
+      /* 类似插槽 */
+      @content;
+    }
+  } @else {
+    @media (min-width: $bp) {
+      /* 类似插槽 */
+      @content;
+    }
+  }
+}

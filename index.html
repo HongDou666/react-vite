@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- 定义网站图标 -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 网站标题 -->
+    <title>晚风 React</title>
+
+    <!-- 2. cdn外链自动引入配置（形式2） -->
+    <!-- 使用CDN的 CSS 文件 -->
+    <% for (const i of cdnCss) { %>
+    <link href="<%= i %>" rel="stylesheet" />
+    <% } %>
+    <!-- 使用CDN的 JS 文件 -->
+    <% for (const i of cdnJs) { %>
+    <script src="<%= i %>" defer></script>
+    <% } %>
+    <!-- 使用CDN的 Js 文件 (module形式) -->
+    <% for (const i of moduleJs) { %>
+    <script type="module" src="<%= i %>" defer></script>
+    <% } %>
+
+    <script>
+      /*
+        使用 monaco-editor 时，在浏览器控制台会看到如下警告：
+        Could not create web worker(s). Falling back to loading web worker code in main thread, which might cause UI freezes
+        这是因为浏览器的安全策略限制了在主线程中加载 Web Worker 代码，导致编辑器的性能下降
+        为了解决这个问题，我们可以通过配置 MonacoEnvironment 来告诉 Monaco 在哪里加载 Web Worker 代码
+      */
+      // 在加载应用前配置 Monaco 环境
+      window.MonacoEnvironment = {
+        getWorkerUrl: function (moduleId, label) {
+          return './monaco-editor-worker-loader.js';
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <!-- 若浏览器不支持js则展示标签中的内容 -->
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+/*
+  主题切换: 基于 scss 做法
+  抖音链接: https://www.douyin.com/user/self?from_tab_name=main&modal_id=7403633738334096681&showSubTab=video&showTab=record
+*/
+
+@use '~@/styles/scss/global-auto-variable' as auto;
+
+/* scss 主题模式 */
+$themes: (
+  // 亮色主题
+  light:
+    (
+      textColor: #000000e0,
+      bgColor: #d2e0fa,
+      borderColor: var(--color-custom5)
+    ),
+  // 暗色主题
+  dark:
+    (
+      textColor: #fff,
+      bgColor: #203175,
+      /*
+        注意: 虽然此变量也是全局变量 但是由于当前scss文件也被用作为全局变量文件 在vite.config中声明 所有不能直接使用 $auto-color-custom4 还需手动引入使用
+      */
+        borderColor: auto.$auto-color-custom4
+    )
+);
+
+$currentTheme: 'light';
+
+@mixin theme() {
+  /* 循环主题 */
+  @each $key, $value in $themes {
+    $currentTheme: $key !global;
+    html[data-scssTheme='#{$key}'] & {
+      @content;
+    }
+  }
+}
+
+@function getvar($key) {
+  $themeMap: map-get($themes, $currentTheme);
+  @return map-get($themeMap, $key);
+}
+
+/* 使用方法演示 */
+.demo-test {
+  width: 100px;
+  height: 100px;
+
+  @include theme {
+    color: getvar('textColor');
+    background-color: getvar('bgColor');
+    border: 1px solid getvar('borderColor');
+  }
+}

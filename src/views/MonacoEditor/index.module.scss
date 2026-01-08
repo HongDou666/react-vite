@@ -1,0 +1,17 @@
+:global {
+  .rule-lang {
+    border: 1px solid rgb(255, 159, 110);
+    border-radius: 2px;
+  }
+
+  .rule-placeholder {
+    user-select: none;
+    pointer-events: none;
+
+    &::after {
+      content: '请输入';
+      color: #7d8099;
+      font-size: 14px;
+    }
+  }
+}

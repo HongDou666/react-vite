@@ -1,0 +1,58 @@
+.layout {
+  --height: 56px;
+
+  height: 100vh;
+  overflow: hidden;
+
+  .layoutSider {
+    max-height: 100vh;
+    overflow-y: hidden;
+    background-color: var(--app-bg-color);
+    box-shadow: 0 0 2px rgb(0 21 41 / 8%);
+
+    .siderLogo {
+      display: flex;
+      height: var(--height);
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      h2 {
+        font-family: ZQC-yrdz;
+        font-size: 18px;
+        white-space: nowrap;
+        color: var(--app-color);
+      }
+    }
+  }
+
+  .layoutHeader {
+    height: var(--height);
+    padding: 0 12px;
+    background-color: var(--app-bg-color);
+    border-bottom: rgb(5 5 5 / 6%) solid 1px;
+  }
+
+  .layoutContent {
+    padding: 16px;
+    overflow-y: auto;
+    background-color: var(--app-bg-content-color);
+    flex: calc(100vh - 112px);
+
+    .layoutContentMain {
+      background-color: var(--app-bg-content-color);
+      border-radius: 8px;
+      box-shadow: 0 0 2px rgb(0 21 41 / 8%);
+    }
+  }
+
+  .layoutFooter {
+    display: flex;
+    height: var(--height);
+    padding: 0 12px;
+    color: var(--app-color);
+    background-color: var(--app-bg-color);
+    justify-content: center;
+    align-items: center;
+  }
+}

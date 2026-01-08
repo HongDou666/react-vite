@@ -1,0 +1,9 @@
+.reactDraftWysiwyg {
+  :global {
+    .rdw-editor-wrapper {
+      min-height: 500px;
+      margin: 10px;
+      border: 1px solid rgb(255 105 50);
+    }
+  }
+}

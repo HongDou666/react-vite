@@ -1,0 +1,60 @@
+@use './mixin/index.scss' as mixin;
+
+#root {
+  ul li.nav—li {
+    @include mixin.reponseTo(phone) {
+      height: 32px;
+      line-height: 32px;
+    }
+    @include mixin.reponseTo(pad) {
+      height: 34px;
+      line-height: 34px;
+    }
+    @include mixin.reponseTo(notebook) {
+      height: 36px;
+      line-height: 36px;
+    }
+    @include mixin.reponseTo(desktop) {
+      height: 38px;
+      line-height: 38px;
+    }
+    @include mixin.reponseTo(tv) {
+      height: 40px;
+      line-height: 40px;
+    }
+  }
+
+  /*
+    原始写法:
+    @media (min-width: 320px) and (max-width: 480px) {
+      ul li.nav—li {
+        height: 32px;
+        line-height: 32px;
+      }
+    }
+    @media (min-width: 481px) and (max-width: 768px) {
+      ul li.nav—li {
+        height: 34px;
+        line-height: 34px;
+      }
+    }
+    @media (min-width: 769px) and (max-width: 1024px) {
+      ul li.nav—li {
+        height: 36px;
+        line-height: 36px;
+      }
+    }
+    @media (min-width: 1025px) and (max-width: 1200px) {
+      ul li.nav—li {
+        height: 38px;
+        line-height: 38px;
+      }
+    }
+    @media (min-width: 1201px) {
+      ul li.nav—li {
+        height: 40px;
+        line-height: 40px;
+      }
+    }
+  */
+}

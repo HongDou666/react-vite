@@ -1,0 +1,22 @@
+.cssTheme {
+  padding: 10px;
+  font-size: $auto-size;
+  font-weight: $auto-weight;
+  background-color: $auto-color;
+
+  .wrap {
+    height: 240px;
+    margin-top: 10px;
+    background-color: var(--theme-bg-color);
+    border-width: 10px;
+    border-style: solid;
+  }
+
+  .custom {
+    &__level-100 {
+      font-size: 46px;
+      font-weight: 900;
+      color: var(--theme-font-color);
+    }
+  }
+}
