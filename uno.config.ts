@@ -9,7 +9,7 @@ import transformerVariantGroup from '@unocss/transformer-variant-group'
 import { defineConfig } from '@unocss/vite'
 
 /* 从本地文件导入一个自定义预设，可能包含了一些特定的样式规则或快捷方式 */
-import { presetSoybeanAdmin, themeVars } from './uno-preset'
+import { presetSoybeanAdmin, themeVars } from './uno-preset/index.ts'
 
 export default defineConfig<Theme>({
   content: {
