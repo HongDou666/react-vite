@@ -179,10 +179,10 @@ export default defineConfig(function (_a) {
         },
         plugins: [
           /* 不参与打包依赖映射的对象 */
-          externalGlobalsObj
+          // externalGlobalsObj
         ],
         /* cdn外链打包配置（优化点） */
-        external: Object.keys(externalGlobalsObj),
+        // external: Object.keys(externalGlobalsObj),
         /* 打包文件分类输出配置 */
         output: {
           /* 指定模块的输出格式为 ECMAScript 模块 */
