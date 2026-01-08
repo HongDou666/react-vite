@@ -153,7 +153,7 @@ const getRouteTable = (): SyncRoute.RoutersProps[] => {
           path: '/mobx',
           id: 'mobx',
           loader: () => ({ title: 'React: Mobx 状态管理' }),
-          element: lazy(() => import('@/views/Mobx/Mobx'))
+          element: lazy(() => import('@/views/MobX/Mobx'))
         },
         {
           path: '/zustand',
